@@ -1,0 +1,38 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/app.css">
+  <link rel="stylesheet" href="css/index.css">
+</head>
+<body class="claro">
+  <script>
+  var _dbpDev = true;
+    dojoConfig = _dbpDev ? {
+    parseOnLoad : false,
+    modulePaths : {
+       app : "../../app",
+       dbp : "../../dbp"
+      }
+    } : {
+      parseOnLoad : false,
+      modulePaths : {
+        app : "../app",
+        dbp : "../dbp"
+      }
+    };
+
+  </script>
+  <script src="js/dojo-release-1.6.1-src/dojo/dojo.js"></script>
+  <script src="/json.js"></script>  <!-- for ie -->
+  <script src="/socket.io/socket.io.js"></script>
+  <script>dojo.require('app.base');</script>
+
+
+ <!--Start Skeleton HTML -->
+
+ 
+
+<!-- B+L Back Up --->

@@ -1,0 +1,14 @@
+dojo.provide('app.ClientSocket');
+
+//Start ClientSocket Connecting to server
+
+var socketFunction = function(){
+    console.log('Inside ClientSocket');
+    var socket = io.connect('http://127.0.0.1:70');
+      
+    socket.on('info', function (data) {
+	console.log('Info Receieved: ' + dojo.toJson(data));
+	socket.emit('info', { message: 'Successfully Connected' });
+    });
+    
+}

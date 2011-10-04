@@ -1,0 +1,68 @@
+
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/app.css">
+ </head>
+<body class="claro">
+  <script>
+  var _dbpDev = true;
+  dojoConfig = _dbpDev ? {
+    modulePaths : {
+      app : "../../app",
+      }
+  } : {};
+  </script>
+ <!--<script src="js/dojo-release-1.6.1-src/dojo/dojo.js"></script>-->
+<!--  <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script> -->
+<script type="text/javascript" src="js/dojotoolkit/dojo/dojo.js" djconfig="parseOnLoad:true, isDebug:true"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>dojo.require('app.Base');</script>
+
+
+ <!--Start Skeleton HTML -->
+
+ 
+
+<!-- B+L Back Up --->
+<h1>Welcome to B+L Backup <h1>
+
+<div id="B+LId">
+<form dojoType="dijit.form.Form" id="backUpForm">
+
+  <div class=""> 
+  <label for="accessKeyId">
+   AccessKey:
+  <input id="accessKeyId" name="accesskey" 
+	required='true' dojoType="dijit.form.ValidationTextBox"></div>
+
+  <div class=""> 
+  <label for="secretKeyId">
+   SecretKey:
+  <input id="secretKeyId" name="secretkey" 
+	required='true' type="password" dojoType="dijit.form.ValidationTextBox"></div>
+
+  <div class=""> 
+  <label for="filePathId">
+   Directory To BackUp:
+  <input id="filePathId" name="directorytobackup" 
+	required='true' dojoType="dijit.form.ValidationTextBox"></div>
+
+  <div class="">
+  <label for ="bucketId">
+    Storage Point
+  <select dojoType="dijit.form.FilteringSelect" id="bucketId" name ="" class="">
+                 <option>---</option>
+   		 <option>syntactice</option>
+    		 <option>pulsematics</option>
+  </select></div><br>
+
+ <div><button id="backUpButtonId" dojoType="dijit.form.Button" class ="" type="button">
+	   <small>Start BackUp</small>
+	  </button></div>
+
+
+</body>
+</html>
