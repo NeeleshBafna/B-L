@@ -4,7 +4,7 @@ var io = require('socket.io'),
     http = require('http'),
     url = require('url'),
     fs = require('fs'),
-    s3 = require('./BackUpLogic');
+    backUpClient = require('./BackUpLogic');
 
 app.configure(function (request, response) {
 	app.use(express.cookieParser());
@@ -15,7 +15,7 @@ app.configure(function (request, response) {
 app.listen(80);
 var sio = io.listen(app);
 
-//Listening B+L
+//Listening
 sio.sockets.on('connection', function (socket) {
     console.log('Connection Created');
     socket.emit('info', { message: 'Well You Are connected to the system now!!' });
@@ -24,5 +24,6 @@ sio.sockets.on('connection', function (socket) {
 	console.log('Info Received from Client' + JSON.stringify(data));
     });
 
-    s3.backUp(socket);
+//Calling the BackUp procedure
+    backUpClient.backUp(socket);
 });

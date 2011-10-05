@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="css/app.css">
- </head>
+</head>
 <body class="claro">
   <script>
   var _dbpDev = true;
@@ -15,9 +15,7 @@
       }
   } : {};
   </script>
- <!--<script src="js/dojo-release-1.6.1-src/dojo/dojo.js"></script>-->
-<!--  <script src="http://ajax.googleapis.com/ajax/libs/dojo/1.6.0/dojo/dojo.xd.js"></script> -->
-<script type="text/javascript" src="js/dojotoolkit/dojo/dojo.js" djconfig="parseOnLoad:true, isDebug:true"></script>
+  <script type="text/javascript" src="js/dojotoolkit/dojo/dojo.js" djconfig="parseOnLoad:true, isDebug:true"></script>
   <script src="/socket.io/socket.io.js"></script>
   <script>dojo.require('app.Base');</script>
 
@@ -31,7 +29,6 @@
 
 <div id="B+LId">
 <form dojoType="dijit.form.Form" id="backUpForm">
-
   <div class=""> 
   <label for="accessKeyId">
    AccessKey:
@@ -45,9 +42,9 @@
 	required='true' type="password" dojoType="dijit.form.ValidationTextBox"></div>
 
   <div class=""> 
-  <label for="filePathId">
+  <label for="directoryPathId">
    Directory To BackUp:
-  <input id="filePathId" name="directorytobackup" 
+  <input id="directoryPathId" name="directorytobackup" 
 	required='true' dojoType="dijit.form.ValidationTextBox"></div>
 
   <div class="">
@@ -57,12 +54,16 @@
                  <option>---</option>
    		 <option>syntactice</option>
     		 <option>pulsematics</option>
-  </select></div><br>
+  </select></div>
 
- <div><button id="backUpButtonId" dojoType="dijit.form.Button" class ="" type="button">
+  <div class=""> 
+  <label for="folderId">
+   FolderOnBackUPMachine(opt):
+  <input id="folderId" name="folder" dojoType="dijit.form.TextBox"></div>
+
+  <div><button id="backUpButtonId" dojoType="dojox.form.BusyButton" class ="">
 	   <small>Start BackUp</small>
 	  </button></div>
-
 
 </body>
 </html>

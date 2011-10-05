@@ -9,6 +9,7 @@ dojo.require("dijit.form.FilteringSelect");
 // Load the dojo.fx module
 dojo.require("dojo.fx");
 dojo.require("dojo.parser");
+dojo.require("dojox.form.BusyButton");
 
 dojo.require('app.ClientSocket');
 //dojo.require('app.BackUp');

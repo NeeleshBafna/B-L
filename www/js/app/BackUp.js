@@ -1,6 +1,7 @@
 dojo.provide('app.BackUp');
 
 //Start the Back Up
+//Presently NOT Using it. Will later Utilize this modularity
 var backUp = function(socket){
 	console.log(" welcome to B+L Backup Handling Page");
 
