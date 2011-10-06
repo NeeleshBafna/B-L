@@ -5,6 +5,7 @@
   <meta charset="utf-8">
   <title></title>
   <link rel="stylesheet" href="css/app.css">
+
 </head>
 <body class="claro">
   <script>
@@ -25,41 +26,57 @@
  
 
 <!-- B+L Back Up --->
-<h1>Welcome to B+L Backup <h1>
+<h1 style="text-align:center">Welcome to B+L Backup <h1>
 
-<div id="B+LId">
+<div id="BLId">
 <form dojoType="dijit.form.Form" id="backUpForm">
-  <div class=""> 
-  <label for="accessKeyId">
-   AccessKey:
-  <input id="accessKeyId" name="accesskey" 
-	required='true' dojoType="dijit.form.ValidationTextBox"></div>
+  <table>
+  <tr>
+    <td><label for="accessKeyId">
+	AccessKey:
+    </td>    
+    <td> <input id="accessKeyId" name="accesskey" value="AKIAJYA5EAVUJ2ESSYZQ"
+	required='true' dojoType="dijit.form.ValidationTextBox">
+    </td>
+  </tr>      
 
-  <div class=""> 
-  <label for="secretKeyId">
-   SecretKey:
-  <input id="secretKeyId" name="secretkey" 
-	required='true' type="password" dojoType="dijit.form.ValidationTextBox"></div>
+  <tr>
+    <td><label for="secretKeyId">
+	SecretKey:
+    </td>
+    <td><input id="secretKeyId" name="secretkey" value="YK6oekbfeBWcScYafYNHHgcAej2XetoGWz3WTUAH"
+	required='true' type="password" dojoType="dijit.form.ValidationTextBox">
+    </td>
+  </tr>
 
-  <div class=""> 
-  <label for="directoryPathId">
-   Directory To BackUp:
-  <input id="directoryPathId" name="directorytobackup" 
-	required='true' dojoType="dijit.form.ValidationTextBox"></div>
+  <tr>
+    <td><label for="directoryPathId">
+	Directory To BackUp:
+    </td>
+    <td><input id="directoryPathId" name="directorytobackup" dojoType="dijit.form.TextBox">
+    </td>
+  </tr>      
 
-  <div class="">
-  <label for ="bucketId">
-    Storage Point
-  <select dojoType="dijit.form.FilteringSelect" id="bucketId" name ="" class="">
+  <tr>
+    <td><label for ="bucketId">
+	Storage Point
+    </td>
+    <td><select dojoType="dijit.form.FilteringSelect" id="bucketId" name ="" class="">
                  <option>---</option>
    		 <option>syntactice</option>
     		 <option>pulsematics</option>
-  </select></div>
+        </select>
+    </td>
+  </tr>
 
-  <div class=""> 
-  <label for="folderId">
-   FolderOnBackUPMachine(opt):
-  <input id="folderId" name="folder" dojoType="dijit.form.TextBox"></div>
+  <tr>
+    <td><label for="folderId">
+	FolderOnBackUPMachine(opt):
+    </td>
+    <td><input id="folderId" name="folder" dojoType="dijit.form.TextBox">
+    </td>
+</tr>
+</table>
 
   <div><button id="backUpButtonId" dojoType="dojox.form.BusyButton" class ="">
 	   <small>Start BackUp</small>

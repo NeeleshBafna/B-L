@@ -13,10 +13,8 @@ var socketFunction = function(){
     console.log(" welcome to B+L Backup Handling Page");
 
     dojo.connect(dijit.byId('backUpButtonId'),"onClick",function(e) {
-	e.preventDefault();	
 	if (dijit.byId("backUpForm").validate()){
                 if(confirm("Ready to submit data")){	
-		dijit.byId('backUpButtonId').makeBusy();
 		dijit.byId('backUpButtonId').setLabel('Backing Up...');          
  		socket.emit('backUp',dijit.byId('accessKeyId').attr('value'),
 			dijit.byId('secretKeyId').get('value'), 
@@ -30,12 +28,16 @@ var socketFunction = function(){
 	}
 	else{
 	alert("Correct the necessary fields");
+	dijit.byId('backUpButtonId').cancel();
 	}
     });
 
     socket.on('done',function(data){
 	console.log(dojo.toJson(data));
 	dijit.byId('backUpButtonId').cancel();
-	backUpForm.reset();
+    });
+
+    socket.on('note',function(data){
+	alert(dojo.toJson(data));
     });
 }

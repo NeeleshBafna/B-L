@@ -10,6 +10,7 @@ dojo.require("dijit.form.FilteringSelect");
 dojo.require("dojo.fx");
 dojo.require("dojo.parser");
 dojo.require("dojox.form.BusyButton");
+//dojo.require("dojox.form.FileInputFlash");
 
 dojo.require('app.ClientSocket');
 //dojo.require('app.BackUp');
