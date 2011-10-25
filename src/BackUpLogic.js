@@ -1,10 +1,12 @@
-var Client = require('./KnoxClient');
+var control = require('./controller');
 
 function backUp(socket){
     console.log('Inside BackUp Logic');
-
-    socket.on('backUp',function(accessKey,secretKey,directoryPath,bucket,folder,callbackfn){
-	Client.knoxClient(socket,accessKey,secretKey,directoryPath,bucket,folder,callbackfn);
+    socket.on('backUp',function(formData,callbackfn){
+	console.log('Form data is ' + formData);
+		
+	//Handle Callback Properly
+	control.controller(formData);
     });
 }
 

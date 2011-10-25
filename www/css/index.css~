@@ -1,0 +1,21 @@
+form.backUpForm fieldset {
+  margin-bottom: 10px;
+}
+form.backUpForm legend {
+  padding: 0 2px;
+  font-weight: bold;
+}
+form.backUpForm label {
+  display: inline-block;
+  line-height: 1.8;
+  vertical-align: top;
+}
+form.backUpForm fieldset ol {
+  margin: 0;
+  padding: 0;
+}
+form.backUpForm fieldset li {
+  list-style: none;
+  padding: 5px;
+  margin: 0;
+}

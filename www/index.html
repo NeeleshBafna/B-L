@@ -35,7 +35,7 @@
     <td><label for="accessKeyId">
 	AccessKey:
     </td>    
-    <td> <input id="accessKeyId" name="accesskey" value="AKIAJYA5EAVUJ2ESSYZQ"
+    <td> <input id="accessKeyId" name="accessKey" value="AKIAJYA5EAVUJ2ESSYZQ"
 	required='true' dojoType="dijit.form.ValidationTextBox">
     </td>
   </tr>      
@@ -44,7 +44,16 @@
     <td><label for="secretKeyId">
 	SecretKey:
     </td>
-    <td><input id="secretKeyId" name="secretkey" value="YK6oekbfeBWcScYafYNHHgcAej2XetoGWz3WTUAH"
+    <td><input id="secretKeyId" name="secretKey" value="YK6oekbfeBWcScYafYNHHgcAej2XetoGWz3WTUAH"
+	required='true' type="password" dojoType="dijit.form.ValidationTextBox">
+    </td>
+  </tr>
+
+  <tr>
+    <td><label for="backUpPasswordId">
+	BackUp Password:
+    </td>
+    <td><input id="backUpPasswordId" name="backUpPassword" 
 	required='true' type="password" dojoType="dijit.form.ValidationTextBox">
     </td>
   </tr>
@@ -53,7 +62,7 @@
     <td><label for="directoryPathId">
 	Directory To BackUp:
     </td>
-    <td><input id="directoryPathId" name="directorytobackup" dojoType="dijit.form.TextBox">
+    <td><input id="directoryPathId" name="directoryToBackUp" dojoType="dijit.form.TextBox">
     </td>
   </tr>      
 
@@ -61,24 +70,54 @@
     <td><label for ="bucketId">
 	Storage Point
     </td>
-    <td><select dojoType="dijit.form.FilteringSelect" id="bucketId" name ="" class="">
+    <td><select dojoType="dijit.form.FilteringSelect" id="bucketId" name ="bucket" class="">
                  <option>---</option>
    		 <option>syntactice</option>
-    		 <option>pulsematics</option>
+    		 <option>BauschLomb</option>
         </select>
     </td>
   </tr>
 
   <tr>
-    <td><label for="folderId">
-	FolderOnBackUPMachine(opt):
+    <td><label for ="timeId">
+	Schedule Time
     </td>
-    <td><input id="folderId" name="folder" dojoType="dijit.form.TextBox">
+    <td><input id="timeId" name="scheduleTime" dojoType="dijit.form.TimeTextBox">
     </td>
-</tr>
+  </tr>
+
+  <tr>
+    <td><label for ="schedulePatternId">
+	Schedule Pattern
+    </td>
+    <td><table>
+	<tr>
+	  <td><label for="dayId">
+	  Day
+	  </td>
+	  <td><input id="dayId" name="day" style="width:20%" regExp="[1-9]|[12][0-9]|3[01]|\*" dojoType="dijit.form.ValidationTextBox"><br>
+	  </td>
+	</tr>
+	<tr>
+	  <td><label for="monthId">
+	  Month
+	  </td>
+	  <td><input id="monthId" name="month" style="width:20%" regExp="[1-9]|1[012]|\*" dojoType="dijit.form.ValidationTextBox"><br>
+	  </td>
+	</tr>
+	<tr>
+	  <td><label for="weekId">
+	 week
+	 </td>
+	  <td><input id="weekId" name="week" style="width:20%" regExp="[1-7]|\*" dojoType="dijit.form.ValidationTextBox">
+	  </td>
+	</tr>
+      </table>	
+    </td>
+  </tr>
 </table>
 
-  <div><button id="backUpButtonId" dojoType="dojox.form.BusyButton" class ="">
+  <div><button id="backUpButtonId" dojoType="dijit.form.Button" class ="">
 	   <small>Start BackUp</small>
 	  </button></div>
 

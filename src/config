@@ -1,0 +1,12 @@
+{
+    "id":"1111",
+    "name":"UBUNTU BACKUP",
+    "machines" :[
+    {
+        "ip": "127.0.0.1",
+	"machinename": "localhost",
+	"folders": "/home/neeleshbafna/testdata"
+     }
+	],
+     "password": "neelesh"
+}

@@ -12,7 +12,7 @@ app.configure(function (request, response) {
 	app.use(express.errorHandler({ dumpExceptions: true, showStack: true }));
 });
 
-app.listen(80);
+app.listen(8080);
 var sio = io.listen(app);
 
 //Listening

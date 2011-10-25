@@ -1,0 +1,4 @@
+#! /bin/bash
+
+cd ~/BL/
+node remote.js
