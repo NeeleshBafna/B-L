@@ -1,6 +1,6 @@
-Things Needed to Run BL BackUP System
+Regarding BL BackUP System
 
-1. sudo apt-get install duplicity
+1. Needed: sudo apt-get install duplicity
 
 2. In Config file, machinename is hard coded to 'localhost', presently checked only for 'localhost' have to procure one machine from Amazon Ec2 for remote testing.
 

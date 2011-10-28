@@ -86,21 +86,29 @@
 	  <td><label for="dayId">
 	  Day
 	  </td>
-	  <td><input id="dayId" name="day" style="width:20%" regExp="[1-9]|[12][0-9]|3[01]|\*" dojoType="dijit.form.ValidationTextBox"><br>
+	  <td><input id="dayId" name="day" style="width:20%" 
+			regExp="[1-9]|[12][0-9]|3[01]|\*" 
+			promptMessage="Enter '*' for all possible values"
+			dojoType="dijit.form.ValidationTextBox"><br>
 	  </td>
 	</tr>
 	<tr>
 	  <td><label for="monthId">
 	  Month
 	  </td>
-	  <td><input id="monthId" name="month" style="width:20%" regExp="[1-9]|1[012]|\*" dojoType="dijit.form.ValidationTextBox"><br>
+	  <td><input id="monthId" name="month" promptMessage="Enter '*' for all possible values" 
+			style="width:20%" 
+			regExp="[1-9]|1[012]|\*" dojoType="dijit.form.ValidationTextBox"><br>
 	  </td>
 	</tr>
 	<tr>
 	  <td><label for="weekId">
 	 week
 	 </td>
-	  <td><input id="weekId" name="week" style="width:20%" regExp="[1-7]|\*" dojoType="dijit.form.ValidationTextBox">
+	  <td><input id="weekId" name="week" style="width:20%" 
+			regExp="[1-7]|\*" 
+			promptMessage="Enter '*' for all possible values"
+			dojoType="dijit.form.ValidationTextBox">
 	  </td>
 	</tr>
       </table>	
