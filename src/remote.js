@@ -23,21 +23,21 @@ function callBackFn(error, stdout, stderr){
 	    data = JSON.parse(buf);
 	    hour = data.scheduleTime.slice(1,3);
             min = data.scheduleTime.slice(4,6);
-	    var command = min+' '+hour+' '+data.day+' '+data.month+' '+data.week+' '+pwd+'/duplicityScript.sh '+data.accessKey+' '+data.secretKey+' '+data.bucket+' '+data.directoryToBackUp +' >> ' + pwd+'/backupLog'+'\n';
+	    var command = min+' '+hour+' '+data.day+' '+data.month+' '+data.week+' '+pwd+'/duplicityScript.sh '+data.accessKey+' '+data.secretKey+' '+data.bucket+' '+data.directoryToBackUp+' '+data.machineName+' >> ' + pwd+'/backupLog'+'\n';
 	    console.log('command is ' + command);
 	    fs.open(pwd+'/scheduler','a+',undefined,function(err,fd){
 		if(err)throw err;
 		else{
 		    fs.write(fd,command,undefined,undefined,function(err,written){
 		   	if (err) throw err;
-			exec('cat ~/BL/scheduler | crontab -', callBackFn);
+			exec('cat '+pwd+'/scheduler | crontab -', callBackFn);
 			console.log('It\'s saved!');
 			// fs.close(fd);
 		    });
 		}
 	    });
 	}
-	exec('rm ~/BL/arguments.txt', callBackFn);
+	exec('rm '+pwd+'/arguments.txt', callBackFn);
   });
   
 }

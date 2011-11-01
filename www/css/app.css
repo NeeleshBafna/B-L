@@ -6,3 +6,13 @@ otherwise, you can remove them.
 
 @import '../js/dojotoolkit/dojo/resources/dojo.css';
 @import '../js/dojotoolkit/dijit/themes/claro/claro.css';
+
+body 
+{
+	font:75%/1.2em Arial, Helvetica, Sans-Serif;
+	//text-align:center;
+	color:#000;
+	background:#D6EEF2 url(/images/bodyBG.png) repeat-x fixed 0 0;
+	width: 80%;
+	padding-left: 18%;
+}
