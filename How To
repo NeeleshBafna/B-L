@@ -1,0 +1,18 @@
+1. Machine Name: localhost or ubuntu@ec2-50-19-20-195.compute-1.amazonaws.com
+
+2. Directory Path: absolute pathname /home/ubuntu/sample
+
+3. Regarding code:
+
+	i. Downloads/my-ec2-key.pem is the path to the key of the ec2 instance, so change accordingly.
+       ii. BL is the folder on the remote machine which contains the code to run there.
+      iii. arguments.txt contains the arguments being passed from the browser.
+       iv. remote.js contains the code to schedule the backup.
+        v. For every machine a folder is created on the S3 bucket 'Bausch&Lomb', like if backup is scheduled from localhost its Bausch&Lomb/localhost
+       vi. Presently backup is incremental. If we want to schedule fullbackup after few days, it can be done easily.
+      vii. Need the proper requirements to restore the files.
+     viii. Using 'crontab' for scheduling the backup from the machine.
+       ix. 'backupLog' contains the statistics of the backup scheduled.
+	x. chmod 400 my-ec2-key.pem 
+        
+4. Rest I think it's self explanatory.

@@ -1,4 +1,4 @@
-var controller = function(formData){
+var controller = function(formData,callbackfn){
 var fs = require('fs');
 var exec = require('child_process').exec;
 var async = require('async');
@@ -20,6 +20,7 @@ function callBackFn(error, stdout, stderr){
 
     if(machineName == 'localhost'){
 	exec('node remote.js',callBackFn);
+	callbackfn({'message':'BackUp Scheduled'});
     }
 
     else{
@@ -40,11 +41,17 @@ function callBackFn(error, stdout, stderr){
 	    });
 	    });	  
 	}else{
-	    exec('scp -i ~/Downloads/my-ec2-key.pem '+__dirname+'/arguments.txt '+machineName+':~/BL/',callBackFn);
+	    exec('scp -i ~/Downloads/my-ec2-key.pem '+__dirname+'/arguments.txt '+machineName+':~/BL/',function(error,stdout,stderr){
+		if(stderr)console.log('stderr is: ' + stderr);
+		if (error !== null) {
+		    console.log('exec error: ' + error);
+		}	    	
             exec('ssh -i ~/Downloads/my-ec2-key.pem '+machineName+' node /home/ubuntu/BL/remote.js',callBackFn);
+	    })
 	    //exec('rm arguments.txt',callBackFn);
 	}
-    })
+	    callbackfn({'message':'BackUp Scheduled'});
+	})
     }
 }
 

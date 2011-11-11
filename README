@@ -2,12 +2,10 @@ Regarding BL BackUP System
 
 1. Needed: sudo apt-get install duplicity
 
-2. In Config file, machinename is hard coded to 'localhost', presently checked only for 'localhost' have to procure one machine from Amazon Ec2 for remote testing.
+2. Node Version 0.4.12
 
-3. Password in config file is sudo passowrd of the machine running the server.js.
+3. NPM install  
 
-4. backupLog in '~/BL' directory contains the log of the backup scheduled, we can show that to know the stats of incremental backup.
 
-5. Tested for Ubuntu Machine.
 
 
