@@ -16,3 +16,10 @@
 	x. chmod 400 my-ec2-key.pem 
         
 4. Rest I think it's self explanatory.
+// Krishna 
+
+async module is not present in the node_modules. did "npm install async"
+
+error says it is trying to find remote.js from the B-L directory as opposed to B-L/src. just made a copy of the 
+remote.js into the B-l
+
